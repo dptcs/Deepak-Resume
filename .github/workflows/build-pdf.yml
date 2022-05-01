@@ -48,13 +48,3 @@ jobs:
           git commit -m "chore: CI Automation PDF Build"
           git push origin master
      
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          npm ci
-          npm run release

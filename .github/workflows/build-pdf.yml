@@ -31,16 +31,15 @@ jobs:
         run: |
           sudo apt update
           sudo apt install poppler-utils
+          tree
           pdftoppm -png ./OpenFonts/de-resume.pdf > de-resume.png
-      - name: Set git remote URL
-        run: git remote set-url origin https://$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
-      - uses: stefanzweifel/git-auto-commit-action@v4
+          tree
+
+      - name: Commit PDF abd PNG files
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Persist state. run num ${{ github.run_id }}
-          push_options: --force
-          commit_user_name: dptcs
-          commit_user_email: deepak.sisupalan@mnscorp.net
-          commit_author: Deepak Sisupalan <deepak.sisupalan@mnscorp.net>
+          commit_message:Persist pdf and png. run num ${{ github.run_id }}
+
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:

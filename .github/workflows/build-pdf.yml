@@ -23,7 +23,7 @@ jobs:
       - name: LaTeX compilation
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: ./OpenFonts/de-resume.tex
+          root_file: de-resume.tex
           latexmk_use_xelatex: true
           working_directory: OpenFonts
 

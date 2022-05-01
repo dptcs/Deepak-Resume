@@ -32,9 +32,8 @@ jobs:
         run: |
           sudo apt update
           sudo apt install poppler-utils
-          tree
           pdftoppm -png ./OpenFonts/de-resume.pdf > de-resume.png
-          tree
+          mv ./OpenFonts/de-resume.pdf ./OpenFonts/deepak_sisupalan_resume.pdf
       
       - name: Setup git config
         run: |
@@ -43,7 +42,7 @@ jobs:
       
       - name: Commit built files
         run: |
-          git add OpenFonts/de-resume.pdf
+          git add OpenFonts/deepak_sisupalan_resume.pdf
           git add de-resume.png
           git commit -m "chore: CI Automation PDF Build"
           git push origin master

@@ -5,7 +5,7 @@ Deepak-Resume
 
 ![alt tag](https://raw.githubusercontent.com/dptcs/Deepak-Resume/master/de-resume.png)
 
-[direct download](https://github.com/dptcs/Deepak-Resume/raw/master/OpenFonts/de-resume.pdf)
+[direct download](https://github.com/dptcs/Deepak-Resume/raw/master/OpenFonts/deepak_sisupalan_resume.pdf)
 
 ### Local Development
 - Make the required changes in ```de-resume.tex```

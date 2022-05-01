@@ -1,0 +1,264 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% bw-resume - Black and White Resume / Traditional
+%   A personal resume made by @bolbken, repository (https://github.com/bolbken/bw-resume)
+%
+% Forked from original author Debarghya Das (https://github.com/deedy) repository (https://github.com/deedy/Deedy-Resume)
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{de-resume}
+\usepackage{fancyhdr}
+%----------------------------------------------------------------------------------------
+%	GRAPHICS DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+
+%for header image
+\usepackage{graphicx}
+
+% use this for floating figures
+% \usepackage{wrapfig}
+% \usepackage{float}
+% \floatstyle{boxed} 
+% \restylefloat{figure}
+
+%for drawing graphics		
+\usepackage{tikz}				
+\usetikzlibrary{shapes, backgrounds,mindmap, trees}
+
+\usepackage{qrcode}
+
+%----------------------------------------------------------------------------------------
+%	Color DEFINITIONS
+%---------------------------------------------------------------------------------------- 
+\usepackage{transparent}
+\usepackage{color}
+
+% primary color
+\definecolor{maincol}{RGB}{ 0, 0, 0 }
+
+% accent color, secondary
+% \definecolor{accentcol}{RGB}{ 250, 150, 10 }
+
+% dark color
+\definecolor{darkcol}{RGB}{ 70, 70, 70 }
+
+% light color
+\definecolor{lightcol}{RGB}{200,200,200}
+
+
+% Renders a progress-bar to indicate a certain skill in percent.
+% param 1: name of the skill / tech / etc.
+% param 2: level (for example in years)
+% param 3: percent, values range from 0 to 1
+\newcommand{\cvskill}[1] {
+	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
+		\fill [lightcol] (0,0) rectangle (1\marginparwidth, 0.15);
+		\fill [maincol] (0,0) rectangle (#1\marginparwidth, 0.15);
+  	\end{tikzpicture}%
+}
+
+%---------------------------------------------------------------------------------------
+%	QR CODE
+%----------------------------------------------------------------------------------------
+
+% Renders a qrcode image (centered, relative to the parentwidth)
+% param 1: percent width, from 0 to 1
+\newcommand{\cvqrcode} {
+    \qrcode{https://www.linkedin.com/in/deepak-s-3075173a}
+}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Deepak}{Sisupalan}{ \urlstyle{same}\href{mailto:deepaksisupalan@gmail.com}{\hspace{30pt} deepaksisupalan@gmail.com} | +44 7404 284411 | London
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\subsection{Languages}
+\locationsep
+\begin{minipage}[t]{0.3\textwidth}
+Java \\
+Python \\
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\cvskill{0.8}
+\cvskill{0.1}
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+10+ yr \\
+1+ yr \\
+\end{minipage}
+\subsectionsep
+
+\subsection{Patterns, Frameworks \& Tools}
+\locationsep
+\location{Proficient:}
+\textbullet{} Spring Core  \\ 
+\textbullet{} Spring Boot  \\
+\textbullet{} Restful Web Service  \\
+\textbullet{} Microservices  \\ 
+\textbullet{} Terraform \\
+\textbullet{} GitHub Actions \\
+\locationsep
+\location{Competent:}
+\textbullet{} MongoDB  \\ 
+\textbullet{} ELK  \\
+\textbullet{} Kafka  \\ 
+\textbullet{} Apigee Edge \& Microgateway \\
+\textbullet{} Concourse CI \\
+\textbullet{} Git \& GitHub \\
+\textbullet{} Azure App Services \\
+\locationsep
+\location{Advanced Begineer:}
+\textbullet{} Event Driven Architecture  \\
+\textbullet{} Splunk  \\
+\textbullet{} Kubernetes  \\
+\textbullet{} Azure Networking  \\
+\textbullet{} Azure Storage Account  \\
+\textbullet{} Azure Active Directory  \\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+LinkedIn://  \href{https://www.linkedin.com/in/deepak-s-3075173a/}{\bf deepak} \\
+\sectionsep
+\cvqrcode
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Tata Consultancy Services}
+\descript{| Senior DevOps Engineer }
+\location{Oct 2018 - Current}
+\subsectionsep
+\runsubexperience{Platform Engineering}
+\subsectionsep
+\begin{tightemize}
+\item Brightcloud: An E2E Cloud Infrastructure Deployment Orchestrator
+	\begin{tightemize}
+		\sectionsep
+		\item Provides GitOps based, low-friction, ops-supported platform and processes for Devs
+		\item Used a 5 layered deployment of Azure Infrastructure and external tools as plugins
+		\item GitHub Actions as the Orchestrator
+		\item Terraform for IaC 
+		\item Productionized for Azure cloud
+		\item MVP created for Multicloud (GCP) deployment 
+		\item Green field onboarding time reduced to 1 hour from 2 Months
+		\sectionsep
+	\end{tightemize}
+
+\item Apigee Edge : API Management and Microgateway provisioning 
+\begin{tightemize}
+	\sectionsep
+	\item Designed the API management architecture using Apigee for the organization
+	\item Designed \& implemented configuration management using terraform (GitOps Driven)
+	\item Designed \& Implemented Apigee Microgateway in k8s for east-west traffic
+	\sectionsep
+\end{tightemize}
+
+\item Ecosystem Builder: Organization's Access Management
+\begin{tightemize}
+	\sectionsep
+	\item A vending machine styled access management for apps and people onboarding
+	\item Streamlined JML processes 
+	\item GitOps driven
+	\sectionsep
+\end{tightemize}
+
+\item Muziris: A Developer Portal for the Organization
+\begin{tightemize}
+	\sectionsep
+	\item Serves as the UI for Brightcloud \& Ecosystem Builder for UI based self-service
+	\item Forked from Spotify's Backstage
+	\item Single plane for cataloging and discovery 
+	\item Implemented API discovery and onboarding with single touch
+	\sectionsep
+\end{tightemize}
+
+\end{tightemize}
+\sectionsep
+\runsubexperience{Backend Engineering}
+\begin{tightemize}
+\item Data as a Service
+	\sectionsep
+	\begin{tightemize}
+	\item Designed \& Developed nearly 50 Restful Microservice deployed in k8s with high availability
+	\item Architected Mongo Atlas for high availability 
+	\item Event Driven architecture using Kafka \& MQ
+	\item Owned and maintained Apache Kafka 
+	\item Owned and maintained ELK cluster
+	\end{tightemize}
+	\sectionsep
+\end{tightemize}
+\subsectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Education
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education}
+\runsubsection{Mahatma Gandhi University}
+\descript{| BTech. Electronic and Communications Engineering}
+\location{July 2009}
+\begin{tightemize}
+\item Mini Project at ISRO, Trivandrum
+\item Memberships: IEEE
+\end{tightemize}
+
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
+

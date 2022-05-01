@@ -34,7 +34,9 @@ jobs:
           tree
           pdftoppm -png ./OpenFonts/de-resume.pdf > de-resume.png
           tree
-
+      - name: Set git remote URL
+        run: git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+        
       - name: Commit PDF abd PNG files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:

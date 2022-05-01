@@ -38,7 +38,7 @@ jobs:
       - name: Commit PDF abd PNG files
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message:Persist pdf and png. run num ${{ github.run_id }}
+          commit_message: Persist PDF and PNG Run num ${{ github.run_id }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v1

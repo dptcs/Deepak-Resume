@@ -35,17 +35,19 @@ jobs:
           tree
           pdftoppm -png ./OpenFonts/de-resume.pdf > de-resume.png
           tree
+      
+      - name: Setup git config
+        run: |
+          git config user.name "dptcs"
+          git config user.email "deepak.sisupalan@mnscorp.net"
+      
+      - name: Commit built files
+        run: |
+          git add OpenFonts/de-resume.pdf
+          git add de-resume.png
+          git commit -m "chore: CI Automation PDF Build"
+          git push origin master
      
-      - name: Set git remote URL
-        run: git remote set-url origin https://$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Persist PDF. run num ${{ github.run_id }}
-          push_options: --force
-          commit_user_name: dptcs
-          commit_user_email: deepak.sisupalan@mnscorp.net
-          commit_author: Deepak Sisupalan <deepak.sisupalan@mnscorp.net>
-
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:

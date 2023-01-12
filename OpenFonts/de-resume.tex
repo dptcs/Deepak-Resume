@@ -12,35 +12,48 @@
 % 2. Hacky space on the first bullet point on the second column.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 \documentclass[]{de-resume}
 \usepackage{fancyhdr}
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
 %---------------------------------------------------------------------------------------- 
+
 %for header image
 \usepackage{graphicx}
+
 % use this for floating figures
 % \usepackage{wrapfig}
 % \usepackage{float}
 % \floatstyle{boxed} 
 % \restylefloat{figure}
+
 %for drawing graphics		
 \usepackage{tikz}				
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
+
 \usepackage{qrcode}
+
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
 %---------------------------------------------------------------------------------------- 
 \usepackage{transparent}
 \usepackage{color}
+
 % primary color
 \definecolor{maincol}{RGB}{ 0, 0, 0 }
+
 % accent color, secondary
 % \definecolor{accentcol}{RGB}{ 250, 150, 10 }
+
 % dark color
 \definecolor{darkcol}{RGB}{ 70, 70, 70 }
+
 % light color
 \definecolor{lightcol}{RGB}{200,200,200}
+
+
 % Renders a progress-bar to indicate a certain skill in percent.
 % param 1: name of the skill / tech / etc.
 % param 2: level (for example in years)
@@ -51,9 +64,11 @@
 		\fill [maincol] (0,0) rectangle (#1\marginparwidth, 0.15);
   	\end{tikzpicture}%
 }
+
 %---------------------------------------------------------------------------------------
 %	QR CODE
 %----------------------------------------------------------------------------------------
+
 % Renders a qrcode image (centered, relative to the parentwidth)
 % param 1: percent width, from 0 to 1
 \newcommand{\cvqrcode} {
@@ -64,12 +79,14 @@
 \fancyhf{}
  
 \begin{document}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     LAST UPDATED DATE
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \lastupdated
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     TITLE NAME
@@ -77,36 +94,41 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \namesection{Deepak}{Sisupalan}{ \urlstyle{same}{\hspace {30pt}DevOps Architect} |\href{mailto:deepaksisupal@gmail.com}{ deepaksisupal@gmail.com} | \href{tel:+447404284411}{+44 7404 284411} | London
 }
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN ONE
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{minipage}[t]{0.33\textwidth} 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Skills}
+
 \subsection{Languages}
 \locationsep
- \begin{minipage}[t]{0.3\textwidth}
- Java \\
- Python \\
- Cloud \\
- \end{minipage}
- \begin{minipage}[t]{0.4\textwidth}
- \cvskill{0.8}
- \cvskill{0.3}
- \cvskill{0.7}
- \end{minipage}
- \begin{minipage}[t]{0.2\textwidth}
- 11+ yr \\
- 1+ yr \\
- 3+ yr \\
- \end{minipage}
- \subsectionsep
-\section{Projects}
-  
+\begin{minipage}[t]{0.3\textwidth}
+Java \\
+Python \\
+Cloud \\
+\end{minipage}
+\begin{minipage}[t]{0.4\textwidth}
+\cvskill{0.8}
+\cvskill{0.3}
+\cvskill{0.7}
+\end{minipage}
+\begin{minipage}[t]{0.2\textwidth}
+11+ yr \\
+1+ yr \\
+4+ yr \\
+\end{minipage}
+\subsectionsep
+
 \subsection{Patterns, Frameworks \& Tools}
 \locationsep
 \location{Proficient:}
@@ -117,6 +139,7 @@
 \textbullet{} Microservices  \\
 \textbullet{} GitHub Actions \\
 \textbullet{} Restful Web Service  \\
+
 \locationsep
 \location{Competent:}
 \textbullet{} ELK  \\
@@ -127,6 +150,7 @@
 \textbullet{} Git \& GitHub \\
 \textbullet{} Azure App Services \\
 \textbullet{} Apigee Edge \& Microgateway \\
+
 \locationsep
 \location{Advanced Beginner:}
 \textbullet{} Splunk  \\
@@ -137,133 +161,141 @@
 \textbullet{} Azure Active Directory  \\
 \textbullet{} Event Driven Architecture  \\
 \sectionsep
+
 \section{Education} 
 \subsection{BTech in Electronics}
 \descript{Mahatma Gandhi University}
 \location{July 2009 | Kerala, India}
 \sectionsep
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     LINKS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Links} 
 LinkedIn://  \href{https://www.linkedin.com/in/deepaksisupalan}{\bf deepak} \\
 \sectionsep
 \cvqrcode
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN TWO
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \end{minipage} 
 \hfill
 \begin{minipage}[t]{0.66\textwidth} 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Projects
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Projects}
 \runsubsection{Tata Consultancy Services}
 \descript{| Lead DevOps Engineer }
 \location{Oct 2018 - Current}
 \subsectionsep
- \runsubexperience{Platform Engineering}
- \subsectionsep
- \begin{tightemize}
- \item Brightcloud: An E2E Cloud Infrastructure Deployment Orchestrator
- 	\begin{tightemize}
- 		\sectionsep
- 		\item Provisions a cloud platform with end to end automation
- 		\item High availability, ∞ environments \& observability out of box
- 		\item Used a layered deployment of Azure Infrastructure
- 		\item Plugin architecture for external resources
- 		\item GitHub Actions as the Orchestrator \& Terraform for IaC 
- 		\item MVP developed for Multicloud (Azure + GCP) deployment 
- 		\item Greenfield onboarding time reduced to an hour from 1 Month
- 		\sectionsep
- 	\end{tightemize}
+\runsubexperience{Platform Engineering}
+\subsectionsep
+\begin{tightemize}
+\item Brightcloud: An E2E Cloud Infrastructure Deployment Orchestrator
+	\begin{tightemize}
+		\sectionsep
+		\item Provisions a cloud platform with end to end automation
+		\item High availability, ∞ environments \& observability out of box
+		\item Used a layered deployment of Azure Infrastructure
+		\item Plugin architecture for external resources
+		\item GitHub Actions as the Orchestrator \& Terraform for IaC 
+		\item MVP developed for Multicloud (Azure + GCP) deployment 
+		\item Greenfield onboarding time reduced to an hour from 1 Month
+		\sectionsep
+	\end{tightemize}
 
- \item Apigee Edge: API Management and Microgateway provisioning 
- \begin{tightemize}
- 	\sectionsep
- 	\item Designed the API management architecture
- 	\item Implemented Apigee configuration management using terraform
- 	\item Implemented Apigee Microgateway in k8s for east-west traffic
- 	\sectionsep
- \end{tightemize}
+\item Apigee Edge: API Management and Microgateway provisioning 
+\begin{tightemize}
+	\sectionsep
+	\item Designed the API management architecture
+	\item Implemented Apigee configuration management using terraform
+	\item Implemented Apigee Microgateway in k8s for east-west traffic
+	\sectionsep
+\end{tightemize}
 
- \item Ecosystem Builder: Organization's Access Management
- \begin{tightemize}
- 	\sectionsep
- 	\item Vending machine for apps and people onboarding
- 	\item Streamlined organizational JML process \& improved DevXP
- 	\item Greenfield onboarding time reduced to 10 minutes from 2 Weeks
- 	\sectionsep
- \end{tightemize}
+\item Ecosystem Builder: Organization's Access Management
+\begin{tightemize}
+	\sectionsep
+	\item Vending machine for apps and people onboarding
+	\item Streamlined organizational JML process \& improved DevXP
+	\item Greenfield onboarding time reduced to 10 minutes from 2 Weeks
+	\sectionsep
+\end{tightemize}
 
- \item Muziris: A Developer Portal for the Organization
- \begin{tightemize}
- 	\sectionsep
- 	\item Serves as the UI for Brightcloud \& Ecosystem Builder for UI based self-service
- 	\item Forked from Spotify's Backstage
- 	\item Single plane for cataloging and discovery 
- 	\item Implemented API discovery and onboarding with a single touch
- 	\sectionsep
- \end{tightemize}
-\section{Projects}
-  
+\item Muziris: A Developer Portal for the Organization
+\begin{tightemize}
+	\sectionsep
+	\item Serves as the UI for Brightcloud \& Ecosystem Builder for UI based self-service
+	\item Forked from Spotify's Backstage
+	\item Single plane for cataloging and discovery 
+	\item Implemented API discovery and onboarding with a single touch
+	\sectionsep
+\end{tightemize}
+
 \end{tightemize}
 \sectionsep
 \runsubexperience{Backend Engineering}
 \begin{tightemize}
- \item Data as a Service
- 	\sectionsep
- 	\begin{tightemize}
- 	\item Designed \& Developed nearly 50 Restful Microservices deployed in k8s with high availability \& reliability
- 	\item Architected Mongo Atlas for high availability 
- 	\item Event-Driven architecture using Kafka \& MQ
- 	\item Owned and maintained Apache Kafka (deployed on Azure IaaS)
- 	\item Owned and maintained ELK cluster (deployed on AKS)
- 	\end{tightemize}
- 	\sectionsep
- \end{tightemize}
-\section{Projects}
-  
+\item Data as a Service
+	\sectionsep
+	\begin{tightemize}
+	\item Designed \& Developed nearly 50 Restful Microservices deployed in k8s with high availability \& reliability
+	\item Architected Mongo Atlas for high availability 
+	\item Event-Driven architecture using Kafka \& MQ
+	\item Owned and maintained Apache Kafka (deployed on Azure IaaS)
+	\item Owned and maintained ELK cluster (deployed on AKS)
+	\end{tightemize}
+	\sectionsep
+\end{tightemize}
 \subsectionsep
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Cognizant
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \runsubsection{Cognizant}
 \descript{| Sr. Java Engineer }
 \location{Dec 2013 - Oct 2018}
 \subsectionsep
- \runsubexperience{Java Application Development}
- \subsectionsep
- \begin{tightemize}
- \item Lumpsum: A Restful Monolith for Annuity Money Out
- 	\begin{tightemize}
- 		\sectionsep
- 		\item Upgraded the monolith to Java 8. Made performance optimizations, added circuit breakers for resilience \& did general maintenance.
- 		\sectionsep
- 	\end{tightemize}
- \end{tightemize}
+\runsubexperience{Java Application Development}
+\subsectionsep
+\begin{tightemize}
+\item Lumpsum: A Restful Monolith for Annuity Money Out
+	\begin{tightemize}
+		\sectionsep
+		\item Upgraded the monolith to Java 8. Made performance optimizations, added circuit breakers for resilience \& did general maintenance.
+		\sectionsep
+	\end{tightemize}
+\end{tightemize}
 
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Projects}
-  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     Infosys
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \runsubsection{Infosys}
 \descript{| Java Engineer }
 \location{Jan 2010 - Nov 2013}
 \subsectionsep
- \runsubexperience{WCS Development}
- \subsectionsep
- \begin{tightemize}
- \item Sears Web: Improve Sears Consumer's Online shopping Experience
- 	\begin{tightemize}
- 		\sectionsep
- 		\item Helped to create a promotion engine. Enhanced Shopping cart, site headers \& did general maintenance.
- 		\sectionsep
- 	\end{tightemize}
- \end{tightemize}
- \end{minipage} 
+\runsubexperience{WCS Development}
+\subsectionsep
+\begin{tightemize}
+\item Sears Web: Improve Sears Consumer's Online shopping Experience
+	\begin{tightemize}
+		\sectionsep
+		\item Helped to create a promotion engine. Enhanced Shopping cart, site headers \& did general maintenance.
+		\sectionsep
+	\end{tightemize}
+\end{tightemize}
+
+\end{minipage} 
 \end{document}  \documentclass[]{article}
